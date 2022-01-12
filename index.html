@@ -24,7 +24,7 @@
       scene.add(camera);
 
       const arToolkitSource = new THREEx.ArToolkitSource({
-        sourceType: 'webcam'
+        sourceType: 'image'
       });
 
       arToolkitSource.init(() => {
@@ -46,7 +46,7 @@
       };
 
       const arToolkitContext = new THREEx.ArToolkitContext({
-        cameraParametersUrl: 'data/camera_para.dat',
+        cameraParametersUrl: 'data/img.gif',
         detectionMode: 'mono'
       });
 

@@ -75,8 +75,8 @@
           scene.visible = camera.visible;
         }
         const delta = clock.getDelta();
-        mesh.rotation.x += delta * 1.0;
-        mesh.rotation.y += delta * 1.5; 
+        mesh.rotation.x += delta * 0.01;
+        mesh.rotation.y += delta * 0.01; 
         renderer.render(scene, camera);
       });
     </script>

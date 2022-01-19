@@ -62,7 +62,7 @@
 
       const mesh = new THREE.Mesh(
         new THREE.CubeGeometry(1, 1, 1),
-        new THREE.MeshNormalMaterial(),
+        new THREE.MeshPhongMaterial( { color: 0xff0000 } )
       );
       mesh.position.y = 1.0;
       scene.add(mesh);

@@ -11,12 +11,37 @@
         
         <a-scene embedded arjs="debugUIEnabled:false;" renderer="gammaOutput: true;" vr-mode-ui="enabled: false">
             <a-assets>
-                <a-asset-item id="model" src="110.glb"></a-asset-item>
+                <a-asset-item id="model" src="020.glb"></a-asset-item>
             </a-assets>
             <a-marker preset="custom" type='pattern' url="pattern-star.patt">
               <a-entity gltf-model="#model" scale="0.2 0.2 0.2" rotation="-20 0 0" animation-mixer></a-entity>
             </a-marker>
             <a-entity camera></a-entity>
         </a-scene>
+        <script>
+	alert("start1");
+	const config_url = 'https://script.google.com/macros/s/AKfycbwTNSaD7zdVyhRr1TrD95T_jM1ZlJFUkC40GwGDxD68LT-r_Zvff3QvEPIFN_-9A0d67Q/exec';
+    	// 各種メッセージデータをgoogleスプレッドシートから取得する
+ 
+            var httpObj = new XMLHttpRequest();
+            httpObj.open('GET', config_url, true);
+	    httpObj.send();
+            httpObj.onload = function() {
+              var config_data = JSON.parse(this.responseText);
+              var message_words = config_data.message_words;
+	      alert(message_words);
+		const $front_text = document.getElementById("front_text");
+    		
+		
+		    switch (message_words) {
+    case '000':
+	$front_text.setAttribute("value",message_words);
+        alert("a");
+        break;
+    default:
+        alert("b");
+}
+            } 
+</script>
     </body>
 </html>
